@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    formtastic-bootstrap (3.0.0.rc.1)
+    formtastic-foundation (3.0.0.rc.1)
       formtastic (>= 2.2)
 
 GEM
@@ -73,7 +73,7 @@ DEPENDENCIES
   actionpack
   ammeter (~> 0.2.5)
   bundler
-  formtastic-bootstrap!
+  formtastic-foundation!
   nokogiri (< 1.6.0)
   rake
   rspec-rails

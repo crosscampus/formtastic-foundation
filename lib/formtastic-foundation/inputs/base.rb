@@ -1,31 +1,31 @@
-require "formtastic-bootstrap/inputs/base/errors"
-require "formtastic-bootstrap/inputs/base/hints"
-require "formtastic-bootstrap/inputs/base/html"
-require "formtastic-bootstrap/inputs/base/labelling"
+require "formtastic-foundation/inputs/base/errors"
+require "formtastic-foundation/inputs/base/hints"
+require "formtastic-foundation/inputs/base/html"
+require "formtastic-foundation/inputs/base/labelling"
 
 module FormtasticFoundation
   module Inputs
     module Base
 
-      autoload :DatetimePickerish,  "formtastic-bootstrap/inputs/base/datetime_pickerish"
+      autoload :DatetimePickerish,  "formtastic-foundation/inputs/base/datetime_pickerish"
       # autoload :Associations
-      autoload :Collections,  "formtastic-bootstrap/inputs/base/collections"
-      autoload :Choices,      "formtastic-bootstrap/inputs/base/choices"
+      autoload :Collections,  "formtastic-foundation/inputs/base/collections"
+      autoload :Choices,      "formtastic-foundation/inputs/base/choices"
       # autoload :Database
       # autoload :Errors
       # autoload :Fileish
-      autoload :GroupedCollections, "formtastic-bootstrap/inputs/base/grouped_collections"
+      autoload :GroupedCollections, "formtastic-foundation/inputs/base/grouped_collections"
       # autoload :Hints
       # autoload :Html
       # autoload :Labelling
       # autoload :Naming
-      autoload :Numeric,      "formtastic-bootstrap/inputs/base/numeric"
+      autoload :Numeric,      "formtastic-foundation/inputs/base/numeric"
       # autoload :Options
-      autoload :Placeholder,  "formtastic-bootstrap/inputs/base/placeholder"
-      autoload :Stringish,    "formtastic-bootstrap/inputs/base/stringish"
-      autoload :Timeish,      "formtastic-bootstrap/inputs/base/timeish"
+      autoload :Placeholder,  "formtastic-foundation/inputs/base/placeholder"
+      autoload :Stringish,    "formtastic-foundation/inputs/base/stringish"
+      autoload :Timeish,      "formtastic-foundation/inputs/base/timeish"
       # autoload :Validations
-      autoload :Wrapping,     "formtastic-bootstrap/inputs/base/wrapping"
+      autoload :Wrapping,     "formtastic-foundation/inputs/base/wrapping"
 
       include Html
       # include Options

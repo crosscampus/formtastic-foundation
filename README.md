@@ -34,11 +34,11 @@ This version of Formtastic Bootstrap should support the following:
 
 Install the gem with
 
-    gem install formtastic-bootstrap
+    gem install formtastic-foundation
 
 Or add it to your Gemfile:
 
-    gem 'formtastic-bootstrap'
+    gem 'formtastic-foundation'
 
 And install it with <tt>bundle install</tt>.
 
@@ -52,7 +52,7 @@ Add the following line to your Formtastic initialization file:
 Add the following line to the top of your <tt>application.css</tt> file:
 
     # app/assets/stylesheets/application.css
-    *= require formtastic-bootstrap
+    *= require formtastic-foundation
 
 Make sure you've already downloaded and installed Formtastic!
 
@@ -147,7 +147,7 @@ use the ```:append_content``` or ```:prepend_content``` option.
 
 ### Contributors
 
-A big thank you [to all contributors](https://github.com/mjbellantoni/formtastic-bootstrap/contributors)!
+A big thank you [to all contributors](https://github.com/mjbellantoni/formtastic-foundation/contributors)!
 
 ### Submitting Issues
 
