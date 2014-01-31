@@ -1,7 +1,7 @@
 # encoding: utf-8
 require 'spec_helper'
 
-describe 'FormtasticBootstrap::FormBuilder#input' do
+describe 'FormtasticFoundation::FormBuilder#input' do
 
   include FormtasticSpecHelper
 
@@ -498,7 +498,7 @@ describe 'FormtasticBootstrap::FormBuilder#input' do
           semantic_form_for(@new_post) do |builder|
             input_instance = mock('Input instance')
             input_class = "#{input_style.to_s}_input".classify
-            input_constant = "FormtasticBootstrap::Inputs::#{input_class}".constantize
+            input_constant = "FormtasticFoundation::Inputs::#{input_class}".constantize
 
             input_constant.should_receive(:new).and_return(input_instance)
             input_instance.should_receive(:to_html).and_return("some HTML")

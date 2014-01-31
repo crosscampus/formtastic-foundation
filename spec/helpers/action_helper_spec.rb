@@ -1,7 +1,7 @@
 # encoding: utf-8
 require 'spec_helper'
 
-describe 'FormtasticBootstrap::FormBuilder#action' do
+describe 'FormtasticFoundation::FormBuilder#action' do
 
   include FormtasticSpecHelper
 
@@ -55,7 +55,7 @@ describe 'FormtasticBootstrap::FormBuilder#action' do
           semantic_form_for(:project, :url => "http://test.host") do |builder|
             action_instance = mock('Action instance')
             action_class = "#{action_style.to_s}_action".classify
-            action_constant = "FormtasticBootstrap::Actions::#{action_class}".constantize
+            action_constant = "FormtasticFoundation::Actions::#{action_class}".constantize
 
             action_constant.should_receive(:new).and_return(action_instance)
             action_instance.should_receive(:to_html).and_return("some HTML")
@@ -209,7 +209,7 @@ describe 'FormtasticBootstrap::FormBuilder#action' do
     describe ':wrapper_html option' do
 
       describe 'when provided' do
-        # FormtasticBootstrap does not have wrappers around actions.
+        # FormtasticFoundation does not have wrappers around actions.
         #
         # it 'should be passed down to the li tag' do
         #   concat(semantic_form_for(@new_post) do |builder|
@@ -239,7 +239,7 @@ describe 'FormtasticBootstrap::FormBuilder#action' do
       end
 
       describe 'when not provided' do
-        # FormtasticBootstrap does not have wrappers around actions.
+        # FormtasticFoundation does not have wrappers around actions.
         #
         # it 'should use default id and class' do
         #   concat(semantic_form_for(@new_post) do |builder|
@@ -271,7 +271,7 @@ describe 'FormtasticBootstrap::FormBuilder#action' do
 
       it 'should instantiate the Formtastic action' do
         action = mock('action', :to_html => 'some HTML')
-        FormtasticBootstrap::Actions::ButtonAction.should_receive(:new).and_return(action)
+        FormtasticFoundation::Actions::ButtonAction.should_receive(:new).and_return(action)
         concat(semantic_form_for(@new_post) do |builder|
           builder.action(:commit, :as => :button)
         end)
@@ -285,7 +285,7 @@ describe 'FormtasticBootstrap::FormBuilder#action' do
         end
 
         action = mock('action', :to_html => 'some HTML')
-        FormtasticBootstrap::Actions::ButtonAction.should_not_receive(:new).and_return(action)
+        FormtasticFoundation::Actions::ButtonAction.should_not_receive(:new).and_return(action)
         ::ButtonAction.should_receive(:new).and_return(action)
 
         concat(semantic_form_for(@new_post) do |builder|
@@ -299,7 +299,7 @@ describe 'FormtasticBootstrap::FormBuilder#action' do
       it "should be cached (not calling the internal methods)" do
         # TODO this is really tied to the underlying implementation
         concat(semantic_form_for(@new_post) do |builder|
-          builder.should_receive(:custom_action_class_name).with(:button).once.and_return(::FormtasticBootstrap::Actions::ButtonAction)
+          builder.should_receive(:custom_action_class_name).with(:button).once.and_return(::FormtasticFoundation::Actions::ButtonAction)
           builder.action(:submit, :as => :button)
           builder.action(:submit, :as => :button)
         end)

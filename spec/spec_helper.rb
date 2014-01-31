@@ -19,7 +19,7 @@ require File.join(File.dirname(__FILE__), "support", "fb_custom_macros.rb")
 
 RSpec.configure do |config|
   config.before(:suite) do
-    Formtastic::Helpers::FormHelper.builder = FormtasticBootstrap::FormBuilder
+    Formtastic::Helpers::FormHelper.builder = FormtasticFoundation::FormBuilder
   end
   config.include FbCustomMacros
 end
