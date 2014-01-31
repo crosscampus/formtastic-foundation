@@ -9,7 +9,7 @@ module FormtasticBootstrap
 
       # Default button class
       def default_wrapper_classes
-        ["btn"]
+        ["button"]
       end
 
       # :wrapper_html member :class is prefixed with btn
