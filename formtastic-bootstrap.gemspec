@@ -3,11 +3,11 @@ require File.expand_path('../lib/formtastic-bootstrap/version', __FILE__)
 Gem::Specification.new do |s|
   s.name = "formtastic-bootstrap"
   s.version = FormtasticBootstrap::VERSION
-  s.authors = ["Matthew Bellantoni", "Aaron Stone"]
-  s.email = ["mjbellantoni@yahoo.com", "aaron@serendipity.cx"]
-  s.homepage = "http://github.com/mjbellantoni/formtastic-bootstrap"
-  s.description = "Formtastic form builder to generate Twitter Bootstrap-friendly markup."
-  s.summary = "Formtastic form builder to generate Twitter Bootstrap-friendly markup."
+  s.authors = ["Emil Kampp"]
+  s.email = ["emil@kampp.me"]
+  s.homepage = "http://github.com/ekampp/formtastic-foundation"
+  s.description = "Formtastic form builder to generate Foundation-friendly markup."
+  s.summary = "Formtastic form builder to generate Foundation-friendly markup."
   s.extra_rdoc_files = [
     "LICENSE.txt",
     "README.md"
@@ -18,7 +18,7 @@ Gem::Specification.new do |s|
     "README.md",
     "VERSION",
     "lib/**/*.rb",
-    "vendor/assets/stylesheets/formtastic-bootstrap.css"
+    "vendor/assets/stylesheets/formtastic-foundation.css"
   ]
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
