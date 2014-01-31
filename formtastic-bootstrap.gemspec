@@ -1,7 +1,7 @@
 require File.expand_path('../lib/formtastic-bootstrap/version', __FILE__)
 
 Gem::Specification.new do |s|
-  s.name = "formtastic-bootstrap"
+  s.name = "formtastic-foundation"
   s.version = FormtasticBootstrap::VERSION
   s.authors = ["Emil Kampp"]
   s.email = ["emil@kampp.me"]
