@@ -9,7 +9,10 @@ module FormtasticFoundation
 
       # Default button class
       def default_wrapper_classes
-        ["button"]
+        [
+          "button",
+          "secondary",
+        ]
       end
 
       # :wrapper_html member :class is prefixed with btn

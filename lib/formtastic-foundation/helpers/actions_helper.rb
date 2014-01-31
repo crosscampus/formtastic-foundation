@@ -6,9 +6,8 @@ module FormtasticFoundation
       include FormtasticFoundation::Helpers::FieldsetWrapper
 
       def actions(*args, &block)
-
         html_options = args.extract_options!
-        html_options[:class] ||= "form-actions"
+        html_options[:class] ||= "actions"
 
         if block_given?
           field_set_and_list_wrapping(html_options, &block)
