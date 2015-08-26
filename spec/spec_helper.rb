@@ -1,11 +1,8 @@
 require 'bundler/setup'
+require 'pry'
 
 $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
 $LOAD_PATH.unshift(File.dirname(__FILE__))
-
-# require 'rspec'
-# require 'rspec_tag_matchers'
-# require 'rubygems'
 
 # Find Formtastic and grab its testing support first.
 formtastic_full_gem_path = Bundler.load.specs.find{|s| s.name == "formtastic" }.full_gem_path
@@ -22,9 +19,11 @@ RSpec.configure do |config|
     Formtastic::Helpers::FormHelper.builder = FormtasticFoundation::FormBuilder
   end
   config.include FbCustomMacros
-end
 
-# RSpec.configure do |config|
-#   config.include RspecTagMatchers
-#   config.include CustomMacros
-# end
+  config.mock_with :rspec do |c|
+    c.syntax = [:should, :expect]
+  end
+  config.expect_with :rspec do |c|
+    c.syntax = [:should, :expect]
+  end
+end

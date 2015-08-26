@@ -1,5 +1,7 @@
 # Formtastic Foundation
 
+[![Build Status](https://travis-ci.org/mjbellantoni/formtastic-bootstrap.svg?branch=master)](https://travis-ci.org/mjbellantoni/formtastic-bootstrap)
+
 A [Formtastic](https://github.com/justinfrench/formtastic) form builder that creates markup suitable for the [Twitter Bootstrap](http://twitter.github.com/bootstrap/) framework.  In theory, it should just work.  Two great tastes in one!
 
 You can follow [FormBoot on twitter](http://twitter.com/FormBoot) for update announcements and other relevant info.
@@ -17,7 +19,7 @@ This version of Formtastic Bootstrap should support the following:
 *Rails*
 
 * Rails 3.2.x
-* Rails 4.0.x
+* Rails 4.x.x
 
 *Formtastic*
 
@@ -28,7 +30,7 @@ This version of Formtastic Bootstrap should support the following:
 
 * 1.9.2
 * 1.9.3
-* 2.0.x
+* 2.x.x
 
 #### Installation
 
@@ -185,7 +187,7 @@ Source contributions are very welcome!  Most of the recent work on this package 
  * As rich functionally as their Rails counterparts.
  * Extract into a standalone gem.
 * Tests
- * Get them passing!
+ * Fill in all pending specs
  * Refactor
  * More -- See if I'm making sure the Bootstrap classes are present.
 * Documentation
@@ -196,5 +198,5 @@ Source contributions are very welcome!  Most of the recent work on this package 
 
 ## Copyright
 
-Copyright (c) 2013 Matthew Bellantoni. See LICENSE.txt for further details.
+Copyright (c) 2013-2015 Matthew Bellantoni. See LICENSE.txt for further details.
 

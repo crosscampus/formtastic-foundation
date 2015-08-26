@@ -5,11 +5,9 @@ module FormtasticFoundation
       include Base::Choices
 
       # TODO Make sure help blocks work correctly.
-      # TODO Support .inline
 
       def to_html
-        form_group_wrapping do
-          label_html <<
+        bootstrap_wrapping do
           hidden_field_for_all << # Might need to remove this guy.
           collection.map { |choice|
             choice_html(choice)
@@ -30,9 +28,11 @@ module FormtasticFoundation
       end
 
       def checkbox_wrapping(&block)
+        class_name = "checkbox"
+        class_name += " checkbox-inline" if options[:inline]
         template.content_tag(:div,
           template.capture(&block).html_safe,
-          :class => "checkbox"
+          :class => class_name
         )
       end
 
