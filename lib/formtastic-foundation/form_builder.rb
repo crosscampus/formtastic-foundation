@@ -10,6 +10,10 @@ module FormtasticFoundation
     self.input_namespaces = [::Object, ::FormtasticFoundation::Inputs, ::Formtastic::Inputs]
     self.action_namespaces = [::Object, ::FormtasticFoundation::Actions, ::Formtastic::Actions]
 
+    self.input_class_finder = ::Formtastic::InputClassFinder
+    self.action_class_finder = ::Formtastic::ActionClassFinder
+
+
     def self.default_error_class
       # self.default_inline_error_class
       raise
