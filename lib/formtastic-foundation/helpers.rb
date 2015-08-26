@@ -6,7 +6,6 @@ module FormtasticFoundation
     autoload :FieldsetWrapper, 'formtastic-foundation/helpers/fieldset_wrapper'
     # autoload :FileColumnDetection, 'formtastic/helpers/file_column_detection'
     # autoload :FormHelper, 'formtastic/helpers/form_helper'
-    autoload :InputHelper, 'formtastic-foundation/helpers/input_helper'
     autoload :InputsHelper, 'formtastic-foundation/helpers/inputs_helper'
     # autoload :LabelHelper, 'formtastic/helpers/label_helper'
     # autoload :SemanticFormHelper, 'formtastic/helpers/semantic_form_helper'
