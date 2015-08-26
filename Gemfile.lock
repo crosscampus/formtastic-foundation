@@ -21,7 +21,7 @@ GIT
 PATH
   remote: .
   specs:
-    formtastic-foundation (3.0.0.rc.1)
+    formtastic-foundation (3.2.0)
       formtastic (>= 3.0)
 
 GEM
@@ -279,8 +279,16 @@ DEPENDENCIES
   actionpack (~> 3.2)
   ammeter (~> 0.2)
   bundler
-  formtastic-foundation!
   devtools!
+  formtastic-foundation!
+  guard (~> 2.10.3)
+  guard-bundler (~> 2.1.0)
+  guard-rspec (~> 4.5.0)
+  guard-rubocop (~> 1.2.0)
+  jruby-openssl (~> 0.9.4)
+  json (~> 1.8.1)
+  libnotify (~> 0.9.0)
+  listen (~> 2.8.4)
   nokogiri (< 1.6.0)
   racc (~> 1.4.12)
   rake

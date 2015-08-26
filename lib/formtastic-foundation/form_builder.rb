@@ -7,12 +7,8 @@ module FormtasticFoundation
     configure :default_inline_hint_class,  'help-inline'
     configure :default_block_hint_class,   'help-block'
 
-    self.input_namespaces = [::Object, ::FormtasticBootstrap::Inputs, ::Formtastic::Inputs]
-    self.action_namespaces = [::Object, ::FormtasticBootstrap::Actions, ::Formtastic::Actions]
-
-    # TODO: remove both class finders after formtastic 4 (where it will be default)
-    self.input_class_finder = ::Formtastic::InputClassFinder
-    self.action_class_finder = ::Formtastic::ActionClassFinder
+    self.input_namespaces = [::Object, ::FormtasticFoundation::Inputs, ::Formtastic::Inputs]
+    self.action_namespaces = [::Object, ::FormtasticFoundation::Actions, ::Formtastic::Actions]
 
     def self.default_error_class
       # self.default_inline_error_class
@@ -35,12 +31,11 @@ module FormtasticFoundation
       # self.default_block_hint_class = hint_class
       raise
     end
-
-#include FormtasticFoundation::Helpers::InputHelper 
-#include FormtasticFoundation::Helpers::ActionHelper
-
+    
+    include FormtasticFoundation::Helpers::InputHelper # Revisit
     include FormtasticFoundation::Helpers::InputsHelper
     include FormtasticFoundation::Helpers::ErrorsHelper
+    include FormtasticFoundation::Helpers::ActionHelper
     include FormtasticFoundation::Helpers::ActionsHelper
 
   end

@@ -672,14 +672,14 @@ describe 'FormtasticFoundation::FormBuilder#input' do
         end
         context "defaults" do
           before do
-            @default_block_hint_class = FormtasticBootstrap::FormBuilder.default_block_hint_class
+            @default_block_hint_class = FormtasticFoundation::FormBuilder.default_block_hint_class
           end
           after do
-            FormtasticBootstrap::FormBuilder.default_block_hint_class = @default_block_hint_class
+            FormtasticFoundation::FormBuilder.default_block_hint_class = @default_block_hint_class
           end
           it 'should have a custom hint class defaulted for all forms' do
             hint_text = "this is the title of the post"
-            FormtasticBootstrap::FormBuilder.default_block_hint_class = "custom-hint-class"
+            FormtasticFoundation::FormBuilder.default_block_hint_class = "custom-hint-class"
             concat(semantic_form_for(@new_post) do |builder|
               concat(builder.input(:title, :hint => hint_text))
             end)
@@ -924,33 +924,33 @@ describe 'FormtasticFoundation::FormBuilder#input' do
 
         subject { Formtastic::InputClassFinder.new(builder) }
         let(:formtastic_input) { double(:formtastic_input) }
-        let(:formtastic_bootstrap_input) { double(:formtastic_bootstrap_input) }
+        let(:formtastic_foundation_input) { double(:formtastic_foundation_input) }
 
         before do
           Rails.application.config.stub(:cache_classes).and_return(true)
         end
 
-        it 'should use FormtasticBootstrap::Inputs as default scope' do
-          stub_const 'FormtasticBootstrap::Inputs::NewStringInput', formtastic_bootstrap_input
+        it 'should use FormtasticFoundation::Inputs as default scope' do
+          stub_const 'FormtasticFoundation::Inputs::NewStringInput', formtastic_foundation_input
 
           expect {
             subject.class_name(:new_string)
           }.not_to raise_error
         end
 
-        it 'should using Formtastic::Inputs namespace if there is no class in FormtasticBootstrap::Inputs' do
+        it 'should using Formtastic::Inputs namespace if there is no class in FormtasticFoundation::Inputs' do
           stub_const 'Formtastic::Inputs::NewStringInput', formtastic_input
           expect {
             subject.class_name(:new_string)
           }.not_to raise_error
         end
 
-        it 'should prefate FormtasticBootstrap namespace to Formtastic' do
-          stub_const 'FormtasticBootstrap::Inputs::NewStringInput',
-            formtastic_bootstrap_input
+        it 'should prefate FormtasticFoundation namespace to Formtastic' do
+          stub_const 'FormtasticFoundation::Inputs::NewStringInput',
+            formtastic_foundation_input
           stub_const 'Formtastic::Inputs::NewStringInput', formtastic_input
           subject.class_name(:new_string).should
-            eql formtastic_bootstrap_input
+            eql formtastic_foundation_input
         end
       end
 
