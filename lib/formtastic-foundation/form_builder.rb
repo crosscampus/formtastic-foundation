@@ -32,7 +32,6 @@ module FormtasticFoundation
       raise
     end
     
-    include FormtasticFoundation::Helpers::InputHelper # Revisit
     include FormtasticFoundation::Helpers::InputsHelper
     include FormtasticFoundation::Helpers::ErrorsHelper
     include FormtasticFoundation::Helpers::ActionHelper
